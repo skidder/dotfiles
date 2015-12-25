@@ -1,5 +1,8 @@
 [init]
   templatedir = ~/.git_template
+[user]
+  name = "Matthew McClure"
+  email = "m@mmcc.io"
 [push]
   default = current
 [color]
