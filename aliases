@@ -6,18 +6,12 @@ alias e="$EDITOR"
 alias v="$VISUAL"
 alias ls="ls --color=auto"
 
-# Bundler
-alias b="bundle"
-
-# Rails
-alias migrate="rake db:migrate db:rollback && rake db:migrate db:test:prepare"
-alias s="rspec"
+# Docker
+alias dc='docker-compose'
+alias dcr='docker-compose run'
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
-
-# Docker
-alias dc='docker-compose'

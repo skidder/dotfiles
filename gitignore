@@ -9,3 +9,7 @@ tags
 !tags/
 tmp/**/*
 !tmp/cache/.keep
+node_modules
+.hex
+deps
+_build
