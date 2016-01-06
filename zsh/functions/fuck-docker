@@ -5,13 +5,13 @@ function fuck-docker() {
   all_containers="$(docker ps -a -q)"
 
   if [ -n "$running_containers" ]; then
-    docker stop $running_containers
+    docker stop $(docker ps -q)
   else
     echo "No running containers"
   fi
 
   if [ -n "$all_containers" ]; then
-    docker rm $all_containers
+    docker rm $(docker ps -a -q)
   else
     echo "No containers to remove"
   fi
