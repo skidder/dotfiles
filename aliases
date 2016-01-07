@@ -8,6 +8,7 @@ alias v="$VISUAL"
 # Docker
 alias dc='docker-compose'
 alias dcr='docker-compose run'
+alias dm='docker-machine'
 
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
