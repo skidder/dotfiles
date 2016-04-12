@@ -13,3 +13,4 @@ node_modules
 .hex
 deps
 _build
+npm-debug.log

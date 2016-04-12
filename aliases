@@ -10,6 +10,8 @@ alias dc='docker-compose'
 alias dcr='docker-compose run'
 alias dm='docker-machine'
 
+alias flush="sudo killall -HUP mDNSResponder"
+
 # Pretty print the path
 alias path='echo $PATH | tr -s ":" "\n"'
 

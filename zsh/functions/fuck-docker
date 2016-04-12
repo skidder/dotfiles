@@ -11,8 +11,10 @@ function fuck-docker() {
   fi
 
   if [ -n "$all_containers" ]; then
-    docker rm $(docker ps -a -q)
+    docker rm -v $(docker ps -a -q)
   else
     echo "No containers to remove"
   fi
+
+  docker images --no-trunc | grep none | awk '{print $3}' | xargs docker rmi
 }
