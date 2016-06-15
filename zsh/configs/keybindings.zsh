@@ -11,3 +11,5 @@ bindkey "^P" history-search-backward
 bindkey "^Y" accept-and-hold
 bindkey "^N" insert-last-word
 bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
+bindkey '^[[1;9C' forward-word
+bindkey '^[[1;9D' backward-word
