@@ -17,3 +17,7 @@ alias path='echo $PATH | tr -s ":" "\n"'
 
 # Include custom aliases
 [[ -f ~/.aliases.local ]] && source ~/.aliases.local
+
+alias flushdns="sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist && sudo launchctl load -w /System/Library/LaunchDaemons/com.apple.mDNSResponder.plist && dig rancher.mux && ping -c 1 rancher.mux"
+
+alias docker-stopall="docker stop $(docker ps -a -q)"
