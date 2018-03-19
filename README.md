@@ -6,9 +6,9 @@ thoughtbot dotfiles
 Requirements
 ------------
 
-Set zsh as your login shell:
+Set bash as your login shell:
 
-    chsh -s $(which zsh)
+    chsh -s $(which bash)
 
 Install
 -------
@@ -64,8 +64,8 @@ Put your customizations in dotfiles appended with `.local`:
 * `~/.tmux.conf.local`
 * `~/.vimrc.local`
 * `~/.vimrc.bundles.local`
-* `~/.zshrc.local`
-* `~/.zsh/configs/*`
+* `~/.bashrc.local`
+* `~/.bash/configs/*`
 
 For example, your `~/.aliases.local` might look like this:
 
@@ -92,7 +92,7 @@ Your `~/.vimrc.local` might look like this:
 To extend your `git` hooks, create executable scripts in
 `~/.git_template.local/hooks/*` files.
 
-Your `~/.zshrc.local` might look like this:
+Your `~/.bashrc.local` might look like this:
 
     # load pyenv if available
     if which pyenv &>/dev/null ; then
@@ -104,25 +104,25 @@ Your `~/.vimrc.bundles.local` might look like this:
     Plug 'Lokaltog/vim-powerline'
     Plug 'stephenmckinney/vim-solarized-powerline'
 
-zsh Configurations
+bash Configurations
 ------------------
 
-Additional zsh configuration can go under the `~/.zsh/configs` directory. This
+Additional bash configuration can go under the `~/.bash/configs` directory. This
 has two special subdirectories: `pre` for files that must be loaded first, and
 `post` for files that must be loaded last.
 
-For example, `~/.zsh/configs/pre/virtualenv` makes use of various shell
+For example, `~/.bash/configs/pre/virtualenv` makes use of various shell
 features which may be affected by your settings, so load it first:
 
     # Load the virtualenv wrapper
     . /usr/local/bin/virtualenvwrapper.sh
 
-Setting a key binding can happen in `~/.zsh/configs/keys`:
+Setting a key binding can happen in `~/.bash/configs/keys`:
 
     # Grep anywhere with ^G
     bindkey -s '^G' ' | grep '
 
-Some changes, like `chpwd`, must happen in `~/.zsh/configs/post/chpwd`:
+Some changes, like `chpwd`, must happen in `~/.bash/configs/post/chpwd`:
 
     # Show the entries in a directory whenever you cd in
     function chpwd {
@@ -132,14 +132,14 @@ Some changes, like `chpwd`, must happen in `~/.zsh/configs/post/chpwd`:
 This directory is handy for combining dotfiles from multiple teams; one team
 can add the `virtualenv` file, another `keys`, and a third `chpwd`.
 
-The `~/.zshrc.local` is loaded after `~/.zsh/configs`.
+The `~/.bashrc.local` is loaded after `~/.bash/configs`.
 
 vim Configurations
 ------------------
 
-Similarly to the zsh configuration directory as described above, vim
+Similarly to the bash configuration directory as described above, vim
 automatically loads all files in the `~/.vim/plugin` directory. This does not
-have the same `pre` or `post` subdirectory support that our `zshrc` has.
+have the same `pre` or `post` subdirectory support that our `bashrc` has.
 
 This is an example `~/.vim/plugin/c.vim`. It is loaded every time vim starts,
 regardless of the file name:
