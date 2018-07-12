@@ -3,7 +3,7 @@
 [user]
   name = "Scott Kidder"
   email = "scott@mux.com"
-  signingkey = 2A7DEF4A8396FD17
+	signingkey = ABC012747C206AA2
 [push]
   default = current
 [color]
@@ -24,7 +24,7 @@
   ff = only
 [commit]
   template = ~/.gitmessage
-  gpgsign = true
+	gpgsign = true
 [fetch]
   prune = true
 [rebase]
@@ -36,4 +36,4 @@
   smudge = git-lfs smudge %f
   required = true
 [gpg]
-  program = gpg1
+	program = gpg

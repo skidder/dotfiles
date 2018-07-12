@@ -53,3 +53,7 @@ if [ -f '/Users/scottkidder/bin/google-cloud-sdk/path.bash.inc' ]; then source '
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/scottkidder/bin/google-cloud-sdk/completion.bash.inc' ]; then source '/Users/scottkidder/bin/google-cloud-sdk/completion.bash.inc'; fi
+
+# TTY used by GPG for passphrase entry
+# https://www.gnupg.org/documentation/manuals/gnupg/Agent-Examples.html
+export GPG_TTY=$(tty)
