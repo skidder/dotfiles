@@ -22,8 +22,20 @@ alias flushdns="sudo launchctl unload -w /System/Library/LaunchDaemons/com.apple
 
 alias docker-stopall="docker stop $(docker ps -a -q)"
 
+# Git aliases
 alias gitup="git checkout master && git pull"
+alias gitunstage="git reset HEAD~"
 
 alias mux="cd $HOME/go/src/github.com/muxinc/mux"
 
 alias python=/usr/local/bin/python2.7
+
+alias kc="kubectl"
+
+# Kubernetes cluster shortcuts
+alias kc-staging="kubectl config use-context us-west1.gce.k8s.mux.io"
+alias kc-prod-east1="kubectl config use-context us-east1.gce.k8s.mux.io"
+alias kc-prod-east4="kubectl config use-context us-east4.gce.k8s.mux.io"
+alias kc-prod-kz8s="kubectl config use-context default-system"
+alias kc-prod-europe="kubectl config use-context europe-west1.gce.k8s.mux.io"
+alias kc-dev-cloud="kubectl config use-context kubernetes-admin@kubernetes"
