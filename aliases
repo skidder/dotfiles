@@ -33,11 +33,18 @@ alias python=/usr/local/bin/python2.7
 alias kc="kubectl"
 
 # Kubernetes cluster shortcuts
-alias kc-staging="kubectl config use-context us-west1.gce.k8s.mux.io"
-alias kc-prod-east1="kubectl config use-context us-east1.gce.k8s.mux.io"
-alias kc-prod-east4="kubectl config use-context us-east4.gce.k8s.mux.io"
-alias kc-prod-kz8s="kubectl config use-context default-system"
-alias kc-prod-europe="kubectl config use-context europe-west1.gce.k8s.mux.io"
-alias kc-dev-cloud="kubectl config use-context kubernetes-admin@kubernetes"
+## Staging
+alias kc-staging-gce-west1="kubectl config use-context us-west1.gce.k8s.mux.io"
 alias kc-staging-aws-east1="kubectl config use-context us-east-1.aws.k8s-staging.mux.io"
+
+## Production
+alias kc-prod-gce-east1="kubectl config use-context us-east1.gce.k8s.mux.io"
+alias kc-prod-gce-east4="kubectl config use-context us-east4.gce.k8s.mux.io"
+alias kc-prod-gce-europe="kubectl config use-context europe-west1.gce.k8s.mux.io"
 alias kc-prod-aws-east1="kubectl config use-context us-east-1.aws.k8s.mux.io"
+
+## KZ8S
+alias kc-prod-aws-kz8s="kubectl config use-context default-system"
+
+## My Dev Machine
+alias kc-dev-cloud="kubectl config use-context kubernetes-admin@kubernetes"
