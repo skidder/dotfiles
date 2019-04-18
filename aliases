@@ -48,3 +48,6 @@ alias kc-prod-aws-kz8s="kubectl config use-context default-system"
 
 ## My Dev Machine
 alias kc-dev-cloud="kubectl config use-context kubernetes-admin@kubernetes"
+
+# Generate K8S YAMLs
+alias gen-k8s-yamls="go run /Users/scottkidder/go/src/github.com/muxinc/mux/run/k8s-template/main.go -maindir /Users/scottkidder/go/src/github.com/muxinc/mux -repopath /Users/scottkidder/go/src/github.com/muxinc/mux"
